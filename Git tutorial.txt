@@ -1,0 +1,38 @@
+How to create a new branch and push the latest code to new branch:
+
+suppose your latest code in - feature/compensation
+go to that branch : git checkout feature/compensation
+Now create a new branch : git checkout -b thailand_security (here it will create a replica of your branch where latest code reside)
+Now if you do git pull origin feature/compensation, it will say you are up to date
+Now git add -A
+git commit -m "thailand latest code pushed to security branch"
+git push origin thailand_security
+git pull origin thailand_security
+
+===============================================================================
+
+For code setup from GIT:
+
+Clone the master branch
+cd yum-thailand(go to the reposotory directory)
+to switch to sub directory:
+git checkout feature/copensation
+git pull origin feature/copensation
+
+================================================================================
+
+mavaen jar create : mvn -Dmaven.test.skip=true package
+
+=================================================================================
+CREATE TABLE [dbo].[table_name] (
+        [comp_if_merit_budget_id] [int] IDENTITY(1, 1) NOT NULL,
+        [appraisal_period_id] [int] NULL,
+		[comp_budget_mstr_id] [int] null,
+		[value] [DECIMAL](10,2) NULL,
+ 		[IsActive] [BIT] NULL DEFAULT(1),
+        [CreatedBy] [VARCHAR](200) NULL,
+        [CreatedDate] [DATETIME] NULL,
+        [UpdatedBy] [VARCHAR](200) NULL,
+        [UpdatedDate] [DATETIME] NULL,
+        PRIMARY KEY ([comp_if_merit_budget_id] ASC)
+    );
